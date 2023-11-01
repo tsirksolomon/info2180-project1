@@ -7,8 +7,7 @@
 /* The rest */
 body {
     header {
-        background: white;
-        margin:1px;
+        background: white;   
 
         .container {
             padding: 1px;
@@ -43,77 +42,89 @@ body {
                 column-gap: 8%;
                 
                 .overview-hero-text { max-width: 574px; }
-                .overview-hero-image { img { max-width: 200px; } }
+                .overview-hero-image { img { max-width: 190px; } }
             }
         }
 
         .learn-about {
+            padding-bottom: 30px;
+
+            h2 {
+                font-size: 24px;
+                color: #48BB78;
+                margin: 25px;
+            }
+            
             .cards {
-                display: inline-grid;
+                display: grid;
                 grid-template-columns: auto auto auto;
+                justify-content: space-evenly;
     
                 .card {
+                    min-width: 33.3%;
                     padding: 10px;
                     margin: 10px;
-                    border: 2px solid #E2E8F0;
+                    border: 1.5px solid #E2E8F0;
                     border-radius: 5px;
-                    box-shadow: 5px 5px grey;
-    
+                    box-shadow: -1px 0px 2px #bbbdc4, 
+                                 1px 0px 2px #bbbdc4,
+                                 0px 2px 3px #bbbdc4;
+                    
                     h3 {
                         color: #48BB78;
                         font-size: 21px;
                     }
+                    img { max-height: 200px; margin: -5px; }
                 }
-            }
-    
-            h2 {
-                font-size: 24px;
-                color: #48BB78;
-            }
-    
-            img {
-                width: 70px;
             }
         }
     
-        .testing .container {
-            display: inline-grid;
-            grid-template-columns: auto auto;
+        .testing {
             background: #4A5568;
-            color: white;
-    
-            .btn {
-                background-color: #48BB78;
-                border-radius: 5px;
+            padding: 90px;
+            .container {
+                display: flex;
+                color: white;
+                justify-content: space-between;
+                align-items: center;
+
+                .cta{ margin: 30px; }
+
+                a.btn {
+                    white-space: nowrap;
+                    background-color: #48BB78;
+                    padding: 15px 40px;
+                    border-radius: 5px;
+                    color:white;
+                }
             }
-    
         }
     
         .stories {
-    
-            h2,
-            p>a {
-                color: #5A67D8
-            }
-    
-            img {
-                float: left;
-                width: 80px;
-                height: 80px;
-                border-radius: 40px;
+            .container { display: grid; row-gap: 30px; padding: 80px 10px; }
+            h2 { font-size: 24px;}
+            h2, p>a { color: #5A67D8; }
+
+            article { 
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                column-gap: 4%;
+                img {
+                    min-width:200px;
+                    max-height:200px;
+                    object-fit:cover;
+                    border-radius:100px; 
+                }
             }
         }
     
         .newsletter {
             background: #48BB78;
             color: white;
-    
-            align-content: center;
-            max-width: 600px;
-    
-            .container {
-                text-align: center;
-            }
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .container { text-align: center; }
         }
     }
 
