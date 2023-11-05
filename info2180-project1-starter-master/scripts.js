@@ -6,6 +6,7 @@ window.onload = function() {
     let submitMessage = document.querySelector("section.newsletter .container .message");
 
     function checkEmail(){
+        /* Code to validate email */
         return true;
     }
 
